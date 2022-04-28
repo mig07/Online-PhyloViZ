@@ -131,18 +131,21 @@ server.timeout = 100000000000000;
 * Cron Jobs
 *
 * */
-const cronJobs = cronFunctions();
 
-const job = new CronJob('00 00 00 * * 1-7', function() {
-  const connectionString = "pg://" + config.databaseUserString + "@localhost/"+ config.db;
-  const timeInterval = '24 hours';
-  cronJobs.deletePublic(connectionString, timeInterval);
-  }, function () {
-    /* This function is executed when the job stops */
+/* const cronJobs = cronFunctions(); */
+
+/* const job = new CronJob('00 00 00 * * 1-7', 
+  function() {
+    const connectionString = "pg://" + config.databaseUserString + "@localhost/"+ config.db;
+    const timeInterval = '24 hours';
+    cronJobs.deletePublic(connectionString, timeInterval);
+  }, 
+  function () {
+    //This function is executed when the job stops
   },
-  true /* Start the job right now */
-  //'Portugal/Lisboa' /* Time zone of this job. */
-);
+  true //Start the job right now
+  //'Portugal/Lisboa' //Time zone of this job.
+); */
 
 
 module.exports = app;

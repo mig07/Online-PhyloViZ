@@ -9,7 +9,7 @@ nav.navbar.navbar-default.navbar-fixed-top
         span.icon-bar
       a.navbar-brand(href="/") #{title}
     div.navbar-collapse.collapse(id="navbar")
-      ul.nav.navbar-nav
+      ul.nav.navbar-nav        
         li.active
           a(id="buttonHome", style="width: 100%") Home
         li
@@ -17,7 +17,7 @@ nav.navbar.navbar-default.navbar-fixed-top
         li
           a(id="buttonUpdate", style="width: 100%") News
         li
-          a(id="buttonAPI", style="width: 100%") API 
+          a(id="buttonAPI", style="width: 100%") API         
         li.dropdown
           a.dropdown-toggle(href="#", data-toggle="dropdown", role="button", aria-haspopup="true", aria-expanded="false") Actions <span class="caret"></span>
           ul.dropdown-menu
@@ -29,8 +29,9 @@ nav.navbar.navbar-default.navbar-fixed-top
             li
               a(id="buttonUploadDatasets", style="width: 100%") Upload Data sets
         li
-          a(id="buttonHelp", style="width: 100%", data-toggle="offcanvas") Help
-
+          a(id="flowvizButton" href="/flowviz") FLOWViZ
+        li
+          a(id="buttonHelp", style="width: 100%", data-toggle="offcanvas") Help        
       ul.nav.navbar-nav.navbar-right
         if (!user)
           li
